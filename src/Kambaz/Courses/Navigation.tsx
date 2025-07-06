@@ -1,11 +1,17 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams } from "react-router-dom";
 
-export default function CourseNavigation() {
-  const { cid } = useParams();
+export default function Navigation() {
+  const { courseId } = useParams();
+
   return (
     <nav>
-      <Link to={`/Kambaz/Courses/${cid}/Modules`}>Modules</Link><br/>
-      <Link to={`/Kambaz/Courses/${cid}/Assignments`}>Assignments</Link><br/>
+      <Link to={`/Kambaz/Courses/${courseId}/Home`}>Home</Link><br />
+      <Link to={`/Kambaz/Courses/${courseId}/Modules`}>Modules</Link><br />
+      <Link to={`/Kambaz/Courses/${courseId}/Piazza`}>Piazza</Link><br />
+      <Link to={`/Kambaz/Courses/${courseId}/Zoom`}>Zoom</Link><br />
+      <Link to={`/Kambaz/Courses/${courseId}/Quizzes`}>Quizzes</Link><br />
+      <Link to={`/Kambaz/Courses/${courseId}/Assignments`}>Assignments</Link><br />
+      <Link to={`/Kambaz/Courses/${courseId}/Grades`}>Grades</Link><br />
     </nav>
   );
 }

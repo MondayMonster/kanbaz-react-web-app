@@ -1,13 +1,17 @@
-import { Link, useParams } from 'react-router-dom';
-
 export default function Assignments() {
-  const { cid } = useParams();
   return (
     <div>
-      <h3>Assignments</h3>
+      <h2>Assignments</h2>
+      <input placeholder="Search Assignments" /><br/>
+      <button>+ Assignment</button>
+      <button>+ Quiz</button>
+      <button>+ Exam</button>
+      <button>+ Project</button>
+      <h3>Assignment Groups</h3>
       <ul>
-        <li><Link to={`/Kambaz/Courses/${cid}/Assignments/1`}>Assignment 1</Link></li>
-        <li><Link to={`/Kambaz/Courses/${cid}/Assignments/2`}>Assignment 2</Link></li>
+        <li><a href="#">Assignment 1</a></li>
+        <li><a href="#">Assignment 2</a></li>
+        <li><a href="#">Quiz 1</a></li>
       </ul>
     </div>
   );
