@@ -11,10 +11,10 @@ export default function Signin() {
   return (
     <div>
       <h2>Signin</h2>
-      <input placeholder="Username" /><br/>
-      <input type="password" placeholder="Password" /><br/>
+      <input placeholder="Username" defaultValue="john_doe"/><br/>
+      <input type="password" placeholder="Password" defaultValue="pwewpwpwp"/><br/>
       <button onClick={handleSignin}>Sign in</button><br/><br/>
-      <Link to="../Signup">Don't have an account? Sign up</Link>
+      <Link to="/Kambaz/Account/Signup">Don't have an account? Sign up</Link>
     </div>
   );
 }

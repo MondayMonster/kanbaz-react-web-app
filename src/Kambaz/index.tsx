@@ -13,7 +13,7 @@ export default function Kambaz() {
           <Route path="/" element={<Navigate to="Account" replace />} />
           <Route path="Account/*" element={<Account />} />
           <Route path="Dashboard" element={<Dashboard />} />
-          <Route path="Courses/:cid/*" element={<Courses />} />
+          <Route path="Courses/*" element={<Courses />} />
         </Routes>
       </div>
     </div>
