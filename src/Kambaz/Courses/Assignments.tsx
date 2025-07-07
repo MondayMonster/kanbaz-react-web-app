@@ -19,21 +19,21 @@ export default function Assignments() {
       <button>+</button>
       <ul>
         <li>
-          <Link to="/Labs/Lab1">A1 - ENV + HTML</Link><br />
+          <Link to={`/Kambaz/Courses/1/Assignments/1/Edit`}>A1 - ENV + HTML</Link><br />
           <span style={{ fontSize: '0.9em' }}>
             Multiple Modules | <b>Not available until</b> May 6 at 12:00am |
             <b> Due</b> May 13 at 11:59pm | 100 pts
           </span>
         </li>
         <li>
-          <Link to="/Labs/Lab1">A2 - CSS + BOOTSTRAP</Link><br />
+          <Link to={`/Kambaz/Courses/1/Assignments/1/Edit`}>A2 - CSS + BOOTSTRAP</Link><br />
           <span style={{ fontSize: '0.9em' }}>
             Multiple Modules | <b>Not available until</b> May 13 at 12:00am |
             <b> Due</b> May 20 at 11:59pm | 100 pts
           </span>
         </li>
         <li>
-          <Link to="/Labs/Lab1">A3 - JAVASCRIPT + REACT</Link><br />
+          <Link to={`/Kambaz/Courses/1/Assignments/1/Edit`}>A3 - JAVASCRIPT + REACT</Link><br />
           <span style={{ fontSize: '0.9em' }}>
             Multiple Modules | <b>Not available until</b> May 20 at 12:00am |
             <b> Due</b> May 27 at 11:59pm | 100 pts

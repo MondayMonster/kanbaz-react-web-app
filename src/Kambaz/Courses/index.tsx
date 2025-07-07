@@ -8,6 +8,7 @@ import Zoom from "./Zoom";
 import Quizzes from "./Quizzes";
 import Assignments from "./Assignments";
 import Grades from "./Grades";
+import AssignmentEditor from "./AssignmentEditor";
 
 // This will be your layout route where courseId is defined
 function CourseLayout() {
@@ -37,6 +38,7 @@ export default function Courses() {
         <Route path="Quizzes" element={<Quizzes />} />
         <Route path="Assignments" element={<Assignments />} />
         <Route path="Grades" element={<Grades />} />
+        <Route path="Assignments/:assignmentId/Edit" element={<AssignmentEditor />} />
       </Route>
     </Routes>
   );
