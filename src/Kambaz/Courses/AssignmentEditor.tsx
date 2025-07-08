@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 
 export default function AssignmentEditor() {
-  const { courseId, assignmentId } = useParams();
+  useParams();
 
   const [title, setTitle] = useState("A1 - ENV + HTML");
   const [description, setDescription] = useState("Build a page using HTML5 tags.");
