@@ -1,8 +1,10 @@
 import { Link, useParams } from "react-router-dom";
 
-export default function Navigation() {
-  const { courseId } = useParams();
+type Props = {
+  courseId: string;
+};
 
+export default function Navigation({ courseId }: Props) {
   return (
     <nav>
       <Link to={`/Kambaz/Courses/${courseId}/Home`}>Home</Link><br />
