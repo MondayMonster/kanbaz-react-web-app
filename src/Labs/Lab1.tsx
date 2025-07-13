@@ -6,15 +6,16 @@ export default function Lab1() {
   return (
     <div id="wd-lab1" style={{ padding: '20px' }}>
       <h1>Lab 1 - HTML Elements Demo</h1>
-      <h3>Sidhdant Narode</h3>
+      <h3>Siddhant Narode</h3>
       <h3>Section CS5610.60924.202560</h3>
       <h3>GitHub Link</h3>
       <a href="https://github.com/MondayMonster/kanbaz-react-web-app" target="_blank">View Source on GitHub</a>
 
-      <h2>Go To</h2>
+      <h2>Labs</h2>
         <ul>
-        <li><Link to="/Kambaz">Kambaz App</Link></li>
         <li><Link to="/Labs/Lab1">Lab 1</Link></li>
+        <li><Link to="/labs/lab2">Lab 2</Link><br /></li>
+        <li><Link to="/Kambaz">Kambaz App</Link></li>
         </ul>      
       <hr />
 
