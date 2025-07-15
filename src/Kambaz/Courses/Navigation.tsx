@@ -12,11 +12,8 @@ const links = [
 
 ];
 
-type NavigationProps = {
-  courseId: string;
-};
 
-export default function CourseNavigation({ courseId }: { courseId: string }) {
+export default function CourseNavigation({  }: { courseId: string }) {
   const location = useLocation();
 
   return (
