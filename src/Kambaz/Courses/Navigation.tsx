@@ -16,7 +16,7 @@ type NavigationProps = {
   courseId: string;
 };
 
-export default function CourseNavigation() {
+export default function CourseNavigation({ courseId }: { courseId: string }) {
   const location = useLocation();
 
   return (
