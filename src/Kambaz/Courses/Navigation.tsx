@@ -12,6 +12,10 @@ const links = [
 
 ];
 
+type NavigationProps = {
+  courseId: string;
+};
+
 export default function CourseNavigation() {
   const location = useLocation();
 
