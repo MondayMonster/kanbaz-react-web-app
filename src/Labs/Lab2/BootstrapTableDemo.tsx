@@ -1,5 +1,4 @@
-import React from "react";
-import { Table } from "react-bootstrap";
+ import { Table } from "react-bootstrap";
 
 export default function BootstrapTablesDemo() {
   return (
