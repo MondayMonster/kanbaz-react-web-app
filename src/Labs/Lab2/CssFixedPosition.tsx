@@ -2,7 +2,7 @@ import "./index.css";
 
 export default function CssFixedPosition() {
   return (
-<div id="wd-css-position-fixed">
+<div id="wd-css-position-fixed" className="container p-2 border border-secondary mt-3">
   <h2>Fixed position</h2>
   Checkout the blue square that says "Fixed position" stuck all the way on the right and halfway down the page. It doesn't scroll with the rest of the page. Its position is "Fixed".
   <div className="wd-pos-fixed 

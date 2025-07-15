@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Lab2() {
   return (
-    <div>
+    <div className="container p-2 border border-secondary mt-3">
       <h1>Lab 2 - CSS Exercises</h1>
       <ul>
         <li><Link to="/lab2/id-selectors">CSS ID Selectors</Link></li>

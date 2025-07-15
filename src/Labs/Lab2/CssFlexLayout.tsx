@@ -2,7 +2,7 @@ import "./index.css";
 
 export default function CssFlexLayout() {
   return (
-<div id="wd-css-flex">
+<div id="wd-css-flex" className="container p-2 border border-secondary mt-3">
   <h2>Flex</h2>
   <div className="wd-flex-row-container">
     <div className="wd-bg-color-yellow wd-width-75px">

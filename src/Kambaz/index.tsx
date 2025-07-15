@@ -8,7 +8,7 @@ export default function Kambaz() {
   return (
     <div style={{ display: 'flex' }}>
       <KambazNavigation />
-      <div style={{ marginLeft: '20px' }}>
+      <div style={{ marginLeft: '140px' }}>
         <Routes>
           <Route path="/" element={<Navigate to="Account" replace />} />
           <Route path="Account/*" element={<Account />} />

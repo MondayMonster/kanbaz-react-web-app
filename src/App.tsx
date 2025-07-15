@@ -2,6 +2,8 @@ import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Lab1 from './Labs/Lab1';
 import Kambaz from './Kambaz/';
 import Lab2 from "./Labs/Lab2/Lab2"; // Lab 2 Landing Page
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 // Lab 2 Exercises
 import CssIdSelectors from "./Labs/Lab2/CssIdSelectors";
@@ -21,7 +23,12 @@ import CssFloatingImages from "./Labs/Lab2/CssFloatingImages";
 import CssGridLayout from "./Labs/Lab2/CssGridLayout";
 import CssFlexLayout from "./Labs/Lab2/CssFlexLayout";
 import ReactIconsDemo from "./Labs/Lab2/ReactIconsDemo";
-
+import BootstrapGridLayouts from './Labs/Lab2/BootStrapGridLayout';
+import ResponsiveGridDemo from "./Labs/Lab2/ResponsiveGridDemo.tsx";
+import BootstrapTablesDemo from "./Labs/Lab2/BootstrapTableDemo.tsx";
+import BootstrapListsDemo from "./Labs/Lab2/BootstrapListDemo.tsx";
+import BootstrapFormsDemo from "./Labs/Lab2/BootstrapFormsDemo.tsx"; 
+import BootstrapTabsAndCardsDemo from "./Labs/Lab2/BootstrapTabsAndCardsDemo.tsx"; 
 export default function App() {
   return (
     <HashRouter>
@@ -56,6 +63,12 @@ export default function App() {
         <Route path="/labs/lab2/grid-layout" element={<CssGridLayout />} />
         <Route path="/labs/lab2/flex-layout" element={<CssFlexLayout />} />
         <Route path="/labs/lab2/react-icons" element={<ReactIconsDemo />} />
+        <Route path="/labs/lab2/bootstrap-grids" element={<BootstrapGridLayouts />} />
+        <Route path="/labs/lab2/responsive" element={<ResponsiveGridDemo />} />
+        <Route path="/labs/lab2/bootstrap-tables" element={<BootstrapTablesDemo />} />      
+        <Route path="/labs/lab2/bootstrap-lists" element={<BootstrapListsDemo />} />
+        <Route path="/labs/lab2/bootstrap-forms" element={<BootstrapFormsDemo />} />
+        <Route path="/labs/lab2/bootstrap-tabs-cards" element={<BootstrapTabsAndCardsDemo />} />
       </Routes>
     </HashRouter>
   );

@@ -2,7 +2,7 @@ import "./index.css";
 
 export default function CssGridLayout() {
   return (
-<div id="wd-css-grid-layout">
+<div id="wd-css-grid-layout" className="container p-2 border border-secondary mt-3">
   <h2>Grid layout</h2>
 
   {/* Half and Half */}

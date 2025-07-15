@@ -2,7 +2,7 @@ import "./index.css";
 
 export default function CssMargins() {
   return (
-    <div id="wd-css-margins">
+    <div id="wd-css-margins" className="container p-2 border border-secondary mt-3">
       <h2>Margins</h2>
 
       {/* 1. Red border, yellow background, big padding top/left */}

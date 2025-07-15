@@ -5,7 +5,7 @@ import { VscAccount } from "react-icons/vsc";
 
 export default function ReactIconsSampler() {
   return (
-    <div id="wd-react-icons-sampler" className="mb-4">
+    <div id="wd-react-icons-sampler" className="container p-2 border border-secondary mt-3">
       <h3>React Icons Sampler</h3>
       <div className="d-flex">
         <VscAccount className="fs-3 text" />

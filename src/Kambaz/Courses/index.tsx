@@ -8,19 +8,26 @@ import Zoom from "./Zoom";
 import Quizzes from "./Quizzes";
 import Assignments from "./Assignments";
 import Grades from "./Grades";
+import PeopleTable from "./People/Table";
 import AssignmentEditor from "./AssignmentEditor";
+import { Container, Row, Col } from "react-bootstrap";
 
-// This will be your layout route where courseId is defined
 function CourseLayout() {
   const { courseId } = useParams();
 
   return (
-    <div style={{ display: 'flex' }}>
-      <Navigation courseId={courseId!} />
-      <div style={{ marginLeft: '20px' }}>
-        <Outlet />
-      </div>
-    </div>
+    <Container fluid>
+      <Row>
+        {/* Sidebar: hidden on xs screens */}
+        <Col xs={12} md={3} lg={2} className="d-none d-md-block p-0">
+          <Navigation courseId={courseId!} />
+        </Col>
+        {/* Main content */}
+        <Col xs={12} md={9} lg={10} className="p-3">
+          <Outlet />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
@@ -28,8 +35,6 @@ export default function Courses() {
   return (
     <Routes>
       <Route path="/" element={<Navigate to="1/Home" replace />} />
-      
-      {/* layout wrapper for all course pages */}
       <Route path=":courseId" element={<CourseLayout />}>
         <Route path="Home" element={<Home />} />
         <Route path="Modules" element={<Modules />} />
@@ -38,6 +43,7 @@ export default function Courses() {
         <Route path="Quizzes" element={<Quizzes />} />
         <Route path="Assignments" element={<Assignments />} />
         <Route path="Grades" element={<Grades />} />
+        <Route path="People" element={<PeopleTable />} />
         <Route path="Assignments/:assignmentId/Edit" element={<AssignmentEditor />} />
       </Route>
     </Routes>

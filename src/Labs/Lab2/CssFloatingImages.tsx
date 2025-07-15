@@ -2,7 +2,7 @@ import "./index.css";
 
 export default function CssFloatingImages() {
   return (
-<div id="wd-float-divs">
+<div id="wd-float-divs" className="container p-2 border border-secondary mt-3">
   <h2>Float</h2>
   <div>
     <div className="wd-float-left wd-dimension-portrait wd-bg-color-yellow">

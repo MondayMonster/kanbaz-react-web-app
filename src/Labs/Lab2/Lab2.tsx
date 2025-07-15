@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 
 export default function Lab2() {
   return (
-    <div id="wd-lab2" style={{ padding: '20px' }}>
+    <div id="wd-lab2" className="container p-2 border border-secondary mt-3">
+      
       <h1>Lab 2 - Cascading Style Sheets</h1>
       <h3>Siddhant Narode</h3>
       <h3>Section CS5610.60924.202560</h3>
@@ -45,6 +46,12 @@ export default function Lab2() {
         <li><Link to="/labs/lab2/grid-layout">Grid Layout</Link></li>
         <li><Link to="/labs/lab2/flex-layout">Flex Layout</Link></li>
         <li><Link to="/labs/lab2/react-icons">React Icons</Link></li>
+        <li><Link to="/labs/lab2/bootstrap-grids">Bootstrap Grid Layouts</Link></li>
+        <li><Link to="/labs/lab2/responsive">Responsive Grid Demo</Link></li>
+        <li><Link to="/labs/lab2/bootstrap-tables">Bootstrap Tables Demo</Link></li>
+        <li><Link to="/labs/lab2/bootstrap-lists">Bootstrap Lists Demo</Link></li>
+        <li><Link to="/labs/lab2/bootstrap-forms">Bootstrap Forms Demo</Link></li>
+        <li><Link to="/labs/lab2/bootstrap-tabs-cards">Bootstrap Tabs and Cards Demo</Link></li>
       </ul>
 
     </div>

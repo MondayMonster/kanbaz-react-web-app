@@ -1,75 +1,73 @@
+import { Button, InputGroup, FormControl, ListGroup } from "react-bootstrap";
+import { FaSearch, FaPlus, FaRegFolderOpen } from "react-icons/fa";
+import { BsFillFileEarmarkTextFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
+
+const assignments = [
+  {
+    title: "A1 - HTML",
+    due: "Due Sep 10, 2025 at 11:59pm",
+    points: "100 pts",
+    icon: <BsFillFileEarmarkTextFill className="me-2 text-secondary fs-4" />,
+  },
+  {
+    title: "A2 - CSS",
+    due: "Due Sep 17, 2025 at 11:59pm",
+    points: "100 pts",
+    icon: <BsFillFileEarmarkTextFill className="me-2 text-secondary fs-4" />,
+  },
+  {
+    title: "A3 - JavaScript",
+    due: "Due Sep 24, 2025 at 11:59pm",
+    points: "100 pts",
+    icon: <BsFillFileEarmarkTextFill className="me-2 text-secondary fs-4" />,
+  },
+];
 
 export default function Assignments() {
   return (
-    <div>
-      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
-        <input
-          type="text"
-          placeholder="Search for Assignments"
-          style={{ padding: '6px', marginRight: '10px' }}
-        />
-        <button style={{ marginRight: '10px' }}>+ Group</button>
-        <button>+ Assignment</button>
+    <div className="p-4">
+      {/* Top controls */}
+      <div className="d-flex align-items-center mb-4">
+        {/* Search field */}
+        <InputGroup className="w-50">
+          <InputGroup.Text>
+            <FaSearch />
+          </InputGroup.Text>
+          <FormControl placeholder="Search for Assignment" />
+        </InputGroup>
+        {/* Right buttons */}
+        <div className="ms-auto d-flex">
+          <Button variant="secondary" size="sm" className="me-2">
+            <FaRegFolderOpen className="me-2" />
+            Group
+          </Button>
+          <Button variant="danger" size="sm">
+            <FaPlus className="me-2" />
+            Assignment
+          </Button>
+        </div>
       </div>
-
-      <h2 style={{ display: 'inline-block', marginRight: '10px' }}>
-        ASSIGNMENTS 40% of Total
-      </h2>
-      <button>+</button>
-      <ul>
-        <li>
-          <Link to={`/Kambaz/Courses/1/Assignments/1/Edit`}>A1 - ENV + HTML</Link><br />
-          <span style={{ fontSize: '0.9em' }}>
-            Multiple Modules | <b>Not available until</b> May 6 at 12:00am |
-            <b> Due</b> May 13 at 11:59pm | 100 pts
-          </span>
-        </li>
-        <li>
-          <Link to={`/Kambaz/Courses/1/Assignments/1/Edit`}>A2 - CSS + BOOTSTRAP</Link><br />
-          <span style={{ fontSize: '0.9em' }}>
-            Multiple Modules | <b>Not available until</b> May 13 at 12:00am |
-            <b> Due</b> May 20 at 11:59pm | 100 pts
-          </span>
-        </li>
-        <li>
-          <Link to={`/Kambaz/Courses/1/Assignments/1/Edit`}>A3 - JAVASCRIPT + REACT</Link><br />
-          <span style={{ fontSize: '0.9em' }}>
-            Multiple Modules | <b>Not available until</b> May 20 at 12:00am |
-            <b> Due</b> May 27 at 11:59pm | 100 pts
-          </span>
-        </li>
-      </ul>
-
-      <h2>QUIZZES</h2>
-      <ul>
-        <li>
-          <Link to="/Labs/Lab1">Q1 - HTML Quiz</Link><br />
-          <span style={{ fontSize: '0.9em' }}>
-            <b>Due</b> May 15 at 11:59pm | 20 pts
-          </span>
-        </li>
-      </ul>
-
-      <h2>EXAMS</h2>
-      <ul>
-        <li>
-          <Link to="/Labs/Lab1">Midterm Exam</Link><br />
-          <span style={{ fontSize: '0.9em' }}>
-            <b>Due</b> June 1 at 11:59pm | 150 pts
-          </span>
-        </li>
-      </ul>
-
-      <h2>PROJECT</h2>
-      <ul>
-        <li>
-          <Link to="/Labs/Lab1">Final Project Submission</Link><br />
-          <span style={{ fontSize: '0.9em' }}>
-            <b>Due</b> June 10 at 11:59pm | 200 pts
-          </span>
-        </li>
-      </ul>
+      {/* Assignment list */}
+      <ListGroup className="rounded-0">
+        {assignments.map((a, idx) => (
+          <ListGroup.Item
+            key={idx}
+            className="d-flex align-items-center mb-3 p-3"
+            style={{ borderLeft: "4px solid green" }}
+          >
+            {a.icon}
+            <div>
+              <div className="fw-bold fs-5">
+                <Link to={`/Kambaz/Courses/1/Assignments/1/Edit`}>{a.title}</Link>
+              </div>
+              <div className="text-muted small">
+                {a.due} &nbsp;|&nbsp; {a.points}
+              </div>
+            </div>
+          </ListGroup.Item>
+        ))}
+      </ListGroup>
     </div>
   );
 }

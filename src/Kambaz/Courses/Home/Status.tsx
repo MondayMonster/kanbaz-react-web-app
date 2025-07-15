@@ -11,33 +11,33 @@ export default function CourseStatus() {
       <h2>Course Status</h2>
       <div className="d-flex">
         <div className="w-50 pe-1">
-          <Button variant="secondary" size="sm" className="w-100 text-nowrap">
+          <Button variant="secondary" size="lg" className="w-100 text-nowrap">
             <MdDoNotDisturbAlt className="me-2 fs-5" /> Unpublish
           </Button>
         </div>
         <div className="w-50">
-          <Button variant="success" size="sm" className="w-100">
+          <Button variant="success" size="lg" className="w-100">
             <FaCheckCircle className="me-2 fs-5" /> Publish
           </Button>
         </div>
       </div>
       <br />
-      <Button variant="secondary" size="sm" className="w-100 mt-1 text-start">
+      <Button variant="secondary" size="lg" className="w-100 mt-1 text-start">
         <BiImport className="me-2 fs-5" /> Import Existing Content
       </Button>
-      <Button variant="secondary" size="sm" className="w-100 mt-1 text-start">
+      <Button variant="secondary" size="lg" className="w-100 mt-1 text-start">
         <LiaFileImportSolid className="me-2 fs-5" /> Import from Commons
       </Button>
-      <Button variant="secondary" size="sm" className="w-100 mt-1 text-start">
+      <Button variant="secondary" size="lg" className="w-100 mt-1 text-start">
         <MdOutlineContentCopy className="me-2 fs-5" /> Copy This Course
       </Button>
-      <Button variant="secondary" size="sm" className="w-100 mt-1 text-start">
+      <Button variant="secondary" size="lg" className="w-100 mt-1 text-start">
         <FaRegEye className="me-2 fs-5" /> View Course Stream
       </Button>
-      <Button variant="secondary" size="sm" className="w-100 mt-1 text-start">
+      <Button variant="secondary" size="lg" className="w-100 mt-1 text-start">
         <BsFillPersonFill className="me-2 fs-5" /> New Announcement
       </Button>
-      <Button variant="secondary" size="sm" className="w-100 mt-1 text-start">
+      <Button variant="secondary" size="lg" className="w-100 mt-1 text-start">
         <BsCalendarCheck className="me-2 fs-5" /> New Assignment
       </Button>
       {/* Add more buttons as needed */}

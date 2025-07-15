@@ -2,7 +2,7 @@ import "./index.css";
 
 export default function CssCorners() {
   return (
-    <div id="wd-css-corners">
+    <div id="wd-css-corners" className="container p-2 border border-secondary mt-3">
       <h2>Corners</h2>
 
       <div className="wd-corner-top wd-bg-color-yellow wd-border-fat wd-border-blue wd-border-solid wd-padding-fat">

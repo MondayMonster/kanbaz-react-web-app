@@ -2,7 +2,7 @@ import "./index.css";
 
 export default function CssDocumentStructure() {
   return (
-    <div id="wd-css-document-structure">
+    <div id="wd-css-document-structure" className="container p-2 border border-secondary mt-3">
       <div className="wd-selector-1">
         <h3>Document Structure Selectors</h3>
         <div className="wd-selector-2">

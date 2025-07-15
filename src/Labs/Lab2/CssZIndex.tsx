@@ -2,7 +2,7 @@ import "./index.css";
 
 export default function CssZIndex() {
   return (
-<div id="wd-z-index">
+<div id="wd-z-index" className="container p-2 border border-secondary mt-3">
   <h2>Z index</h2>
   <div className="wd-pos-relative">
     <div className="wd-pos-absolute-10-10 

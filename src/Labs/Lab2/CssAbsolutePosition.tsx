@@ -2,7 +2,7 @@ import "./index.css";
 
 export default function CssAbsolutePosition() {
   return (
-<div id="wd-css-position-absolute">
+<div id="wd-css-position-absolute" className="container p-2 border border-secondary mt-3">
   <h2>Absolute position</h2>
   <div className="wd-pos-relative">
     <div className="wd-pos-absolute-10-10 
