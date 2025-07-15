@@ -12,19 +12,12 @@ export default function AssignmentEditor() {
   const [group, setGroup] = useState("Assignments");
   const [gradingType, setGradingType] = useState("Percentage");
   const [submissionType, setSubmissionType] = useState("Online");
-  const [entryOptions, setEntryOptions] = useState<string[]>(["Text Entry", "Website URL"]);
   const [assignTo, setAssignTo] = useState("Everyone");
   const [dueDate, setDueDate] = useState("2025-05-13");
   const [availableFrom, setAvailableFrom] = useState("2025-05-06");
   const [availableUntil, setAvailableUntil] = useState("2025-05-20");
 
-  const toggleOption = (option: string) => {
-    setEntryOptions(prev =>
-      prev.includes(option)
-        ? prev.filter(o => o !== option)
-        : [...prev, option]
-    );
-  };
+
 
   return (
     <div className="p-4">
