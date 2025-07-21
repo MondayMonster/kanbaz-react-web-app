@@ -15,6 +15,7 @@ export default function Lab1() {
         <ul>
         <li><Link to="/Labs/Lab1">Lab 1</Link></li>
         <li><Link to="/labs/lab2">Lab 2</Link><br /></li>
+        <li><Link to="/labs/lab3">Lab 3</Link><br /></li>
         <li><Link to="/Kambaz">Kambaz App</Link></li>
         </ul>      
       <hr />

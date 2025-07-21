@@ -2,6 +2,7 @@ import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Lab1 from './Labs/Lab1';
 import Kambaz from './Kambaz/';
 import Lab2 from "./Labs/Lab2/Lab2"; // Lab 2 Landing Page
+import Lab3 from "./Labs/Lab3"; // Lab 3 Landing Page
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -41,6 +42,9 @@ export default function App() {
 
         {/* Lab 2 Landing */}
         <Route path="/labs/lab2" element={<Lab2 />} />
+
+        {/* Lab 3 Exercises */}
+        <Route path="/labs/lab3/*" element={<Lab3 />} />
 
         {/* Kambaz Application */}
         <Route path="/kambaz/*" element={<Kambaz />} />
