@@ -48,7 +48,7 @@ export default function TOC() {
           target="_blank"
           className="nav-link"
         >
-          Monday Monster GitHub (Siddhnat Narode)
+          Monday Monster GitHub (Siddhant Narode)
         </a>
       </li>
     </ul>

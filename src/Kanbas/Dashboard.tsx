@@ -37,7 +37,6 @@ export default function Dashboard() {
             </div>
           ))}
 
-          {/*  course 1*/}
           {/* <div className="wd-dashboard-course col" style={{ width: "300px" }}>
             <div className="card w-100 h-100">
               <Link
