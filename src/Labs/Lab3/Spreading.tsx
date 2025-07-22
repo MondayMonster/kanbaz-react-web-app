@@ -13,8 +13,7 @@ export default function Spreading() {
       <h3>Object Spread</h3>
       {JSON.stringify(obj1)} <br />
       {JSON.stringify(obj2)} <br />
-      {JSON.stringify(obj3)} <br />
-      <hr />
+      {JSON.stringify(obj3)} <br /> <hr />
     </div>
   );
 }

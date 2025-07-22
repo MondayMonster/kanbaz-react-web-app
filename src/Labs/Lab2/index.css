@@ -1,49 +1,44 @@
-#wd-id-selector-1 {
+/* p {
+  background-color: blue;
+  color: white;
+} */
+p#wd-id-selector-1 {
   background-color: red;
   color: white;
 }
-
 #wd-id-selector-2 {
   background-color: yellow;
   color: black;
 }
-
 .wd-class-selector {
   background-color: yellow;
   color: blue;
 }
 
-.wd-selector-1 {
+.wd-selector-1 .wd-selector-3 {
   background-color: red;
   color: white;
 }
-
-.wd-selector-3 {
+.wd-selector-2 > .wd-selector-3 > .wd-selector-4 {
   background-color: yellow;
   color: blue;
 }
-
-.wd-foreground-blue {
-  color: blue;
-  background-color: white;
+.wd-fg-color-black {
+  color: black;
 }
-
-.wd-foreground-red {
-  color: red;
-  background-color: white;
+.wd-fg-color-white {
+  color: white;
 }
-
-.wd-foreground-green {
+.wd-fg-color-blue {
+  color: #7070ff;
+}
+.wd-fg-color-red {
+  color: #ff7070;
+}
+.wd-fg-color-green {
   color: green;
-  background-color: white;
 }
-
-.wd-fg-color-black { color: black; }
-.wd-fg-color-white { color: white; }
-.wd-fg-color-blue { color: #7070ff; }
-.wd-fg-color-red { color: #ff7070; }
-.wd-fg-color-green { color: green; }
-
+/* Styling the background color */
 .wd-bg-color-yellow {
   background-color: #ffff07;
 }
@@ -60,264 +55,32 @@
   background-color: lightgray;
 }
 
-/* Margin Utilities */
-.wd-margin-bottom {
-  margin-bottom: 100px;
-}
-
-.wd-margin-right-left {
-  margin-left: 40px;
-  margin-right: 40px;
-}
-
-.wd-margin-all-around {
-  margin: 40px;
-}
-
-/* Padding */
-.wd-padding-fat {
-  padding: 30px;
-}
-
-/* Color Utilities */
-.wd-bg-color-yellow {
-  background-color: #ffff07;
-}
-.wd-bg-color-blue {
-  background-color: #7070ff;
-}
-.wd-bg-color-red {
-  background-color: #ff7070;
-}
-.wd-fg-color-white {
-  color: white;
-}
-/* Margin Utilities */
-.wd-margin-bottom {
-  margin-bottom: 50px;
-}
-
-.wd-margin-right-left {
-  margin-left: 50px;
-  margin-right: 50px;
-}
-
-.wd-margin-all-around {
-  margin: 30px;
-}
-
-/* Padding Utilities */
-.wd-padded-top-left {
-  padding-top: 50px;
-  padding-left: 50px;
-}
-
-.wd-padded-bottom-right {
-  padding-bottom: 50px;
-  padding-right: 50px;
-}
-
-.wd-padding-fat {
-  padding: 50px;
-}
-
-/* Border Utilities */
+/* Styling borders */
 .wd-border-fat {
-  border-width: 5px;
+  border-width: 20px 30px 20px 30px;
 }
-
-.wd-border-red {
-  border-color: red;
-}
-.wd-border-blue {
-  border-color: blue;
-}
-.wd-border-yellow {
-  border-color: yellow;
-}
-
-.wd-border-solid {
-  border-style: solid;
-}
-
-
-.wd-rounded-corner {
-  border-radius: 10px;
-}
-
-.wd-rounded-pill {
-  border-radius: 999px;
-}
-
-
-/* Background Colors */
-.wd-bg-color-yellow {
-  background-color: #ffff07;
-}
-.wd-bg-color-blue {
-  background-color: #7070ff;
-}
-
-/* Foreground Colors */
-.wd-fg-color-white {
-  color: white;
-}
-
-
-
-.wd-background-blue {
-  background-color: blue;
-  color: white;
-}
-
-.wd-background-red {
-  background-color: red;
-  color: black;
-}
-
-.wd-background-green {
-  background-color: green;
-  color: white;
-}
-
-.wd-fat-red-border {
-  border: 10px solid red;
-}
-
-.wd-thin-blue-dashed-border {
-  border: 1px dashed blue;
-}
-
-.wd-margin-example {
-  background-color: lightgray;
-  margin: 30px;
-}
-
-.wd-corner-example {
-  background-color: pink;
-  border-radius: 25px;
-  padding: 10px;
-}
-
-.wd-dimensions-example {
-  background-color: beige;
-  width: 200px;
-  height: 100px;
-}
-
-.wd-relative-box {
-  position: relative;
-  top: 20px;
-  left: 30px;
-  background-color: orange;
-  padding: 10px;
-}
-
-.wd-absolute-container {
-  position: relative;
-  height: 150px;
-  background-color: #eee;
-}
-
-.wd-absolute-box {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: green;
-  padding: 10px;
-}
-
-.wd-fixed-box {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  background-color: purple;
-  color: white;
-  padding: 10px;
-}
-
-.wd-zindex-box {
-  position: absolute;
-  left: 50px;
-  top: 50px;
-  width: 100px;
-  height: 100px;
-}
-
-.wd-z1 {
-  background-color: blue;
-  z-index: 1;
-}
-
-.wd-z2 {
-  background-color: red;
-  z-index: 2;
-}
-
-.wd-float-container img {
-  float: left;
-  margin-right: 10px;
-}
-
-.wd-grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 10px;
-}
-
-.wd-flex-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.wd-flex-container > div {
-  background-color: lightblue;
-  padding: 10px;
-  margin: 5px;
-}
-/* === COLORS === */
-.wd-fg-color-black { color: black; }
-.wd-fg-color-white { color: white; }
-.wd-fg-color-blue { color: #7070ff; }
-.wd-fg-color-red { color: #ff7070; }
-.wd-fg-color-green { color: green; }
-
-.wd-bg-color-yellow { background-color: #ffff07; }
-.wd-bg-color-blue { background-color: #7070ff; }
-.wd-bg-color-red { background-color: #ff7070; }
-.wd-bg-color-green { background-color: green; }
-.wd-bg-color-gray { background-color: lightgray; }
-
-/* === BORDERS === */
-.wd-border-fat {
-  border-width: 5px;
-}
-
 .wd-border-thin {
-  border-width: 2px;
+  border-width: 4px;
 }
-
-.wd-border-red {
-  border-color: red;
-}
-
-.wd-border-blue {
-  border-color: blue;
-}
-
-.wd-border-yellow {
-  border-color: yellow;
-}
-
 .wd-border-solid {
   border-style: solid;
 }
-
 .wd-border-dashed {
   border-style: dashed;
 }
-
-/* === PADDING === */
+.wd-border-dotted {
+  border-style: dotted;
+}
+.wd-border-yellow {
+  border-color: #ffff07;
+}
+.wd-border-red {
+  border-color: #ff7070;
+}
+.wd-border-blue {
+  border-color: #7070ff;
+}
+/* Styling margins and paddings */
 .wd-padded-top-left {
   padding-top: 50px;
   padding-left: 50px;
@@ -332,7 +95,6 @@
   padding: 50px;
 }
 
-/* === MARGINS === */
 .wd-margin-bottom {
   margin-bottom: 50px;
 }
@@ -346,28 +108,26 @@
   margin: 30px;
 }
 
-/* === CORNERS === */
-.wd-corner-top {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+/* Styling corners */
+.wd-rounded-corners-top {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
 }
 
-.wd-corner-bottom {
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+.wd-rounded-corners-bottom {
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
 
-.wd-corner-all {
-  border-radius: 20px;
+.wd-rounded-corners-all-around {
+  border-radius: 50px;
 }
 
-.wd-corner-except-top-right {
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+.wd-rounded-corners-inline {
+  border-radius: 30px 0px 20px 50px;
 }
 
-/* === DIMENSIONS === */
+/* Styling dimensions */
 .wd-dimension-portrait {
   width: 75px;
   height: 100px;
@@ -383,63 +143,53 @@
   height: 75px;
 }
 
-
-
-/* === RELATIVE POSITION === */
+/* Styling relative position */
 .wd-pos-relative-nudge-up-right {
   position: relative;
   bottom: 30px;
   left: 30px;
 }
-
 .wd-pos-relative-nudge-down-right {
   position: relative;
   top: 20px;
   left: 20px;
 }
-
-
-/* === ABSOLUTE POSITION === */
 .wd-pos-relative {
   position: relative;
 }
 
+/* Styling absolute position */
 .wd-pos-absolute-10-10 {
   position: absolute;
   top: 10px;
   left: 10px;
 }
-
 .wd-pos-absolute-50-50 {
   position: absolute;
   top: 50px;
   left: 50px;
 }
-
 .wd-pos-absolute-120-20 {
   position: absolute;
   top: 20px;
   left: 120px;
 }
 
-
-/* === Z-INDEX === */
-.wd-zindex-bring-to-front {
-  z-index: 10;
-}
-
-/* === FIXED POSITION === */
+/* Styling fixed position */
 .wd-pos-fixed {
   position: fixed;
   right: 0px;
   bottom: 50%;
 }
 
+/* Styling z-index */
+.wd-zindex-bring-to-front {
+  z-index: 10;
+}
 
-/* === FLOAT === */
+/* Floating Images and Content */
 .wd-float-left {
   float: left;
-  height: 100px;
 }
 
 .wd-float-right {
@@ -451,8 +201,7 @@
   clear: both;
 }
 
-
-/* === GRID LAYOUT (FLOAT BASED) === */
+/* Laying out content in a grid */
 .wd-grid-row {
   clear: both;
 }
@@ -487,44 +236,28 @@
   float: left;
 }
 
-
-/* === FLEX LAYOUT === */
+/* 3.1.19 Flex */
 .wd-flex-row-container {
   display: flex;
   flex-direction: row;
 }
-
 .wd-flex-grow-1 {
   flex-grow: 1;
 }
-
 .wd-width-75px {
   width: 75px;
 }
 
-#wd-bs-grid-system {
-  margin-top: 30px;
-}
-
-/* Optional: Customize each section box */
-#wd-bs-grid-system .col {
-  border: 1px solid #ddd;
-  min-height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Optional: More spacing between rows */
-#wd-bs-grid-system .row + .row {
-  margin-top: 20px;
-}
-
-#wd-bs-grid-system .row {
-  margin-top: 10px;
-}
-
-
-#wds-bs-grid-system h3 {
-  margin: 0;
+/* 3.3.5 Hiding and showing responsive content */
+#wd-screen-size-label {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  font-size: 12px;
+  z-index: 1000;
+  width: 220px;
+  text-align: center;
 }

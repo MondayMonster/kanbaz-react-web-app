@@ -12,11 +12,15 @@ export default function House() {
     },
     owners: ["Alice", "Bob"],
   };
+  console.log(house);
+
   return (
     <div id="wd-house">
       <h4>House</h4>
-      <h5>bedrooms</h5>      {house.bedrooms}
-      <h5>bathrooms</h5>     {house.bathrooms}
+      <h5>bedrooms</h5>
+      {house.bedrooms}
+      <h5>bathrooms</h5>
+      {house.bathrooms}
       <h5>Data</h5>
       <pre>{JSON.stringify(house, null, 2)}</pre>
       <hr />

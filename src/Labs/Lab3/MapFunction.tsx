@@ -11,10 +11,11 @@ export default function MapFunction() {
       cubes = {cubes} <br />
       Todos:
       <ol>
-        {todos.map((todo, i) => (
-          <li key={i}>{todo}</li>
+        {todos.map((todo) => (
+          <li>{todo}</li>
         ))}
-      </ol> <hr/>
+      </ol>{" "}
+      <hr />
     </div>
   );
 }
