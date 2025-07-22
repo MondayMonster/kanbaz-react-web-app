@@ -8,7 +8,7 @@ export default function Labs() {
   return (
     <div id="wd-labs" className="container-fluid">
       <h4>
-        Di He, Section 1{" "}
+        OLA GIT {" "}
         <a href="https://github.com/MondayMonster/kanbaz-react-web-app">
           Source Code
         </a>
