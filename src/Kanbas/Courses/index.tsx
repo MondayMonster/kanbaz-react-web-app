@@ -6,9 +6,13 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import { FaAlignJustify } from "react-icons/fa";
 import PeopleTable from "./People/Table";
-import { courses } from "../Database";
 
-export default function Courses() {
+// Define interface for Courses props
+interface CoursesProps {
+  courses: any[];
+}
+
+export default function Courses({ courses }: CoursesProps) {
   const { cid } = useParams();
   const course = courses.find((course) => course._id === cid);
   const { pathname } = useLocation();
