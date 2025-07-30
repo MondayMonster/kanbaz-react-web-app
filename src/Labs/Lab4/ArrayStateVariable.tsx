@@ -15,7 +15,6 @@ export default function ArrayStateVariable() {
         {array.map((item, index) => (
           <li key={index}>
             {item}
-            console.log('Item:', {item}, 'Index:', {index});
             <button
               onClick={() => deleteElement(index)}
               id="wd-delete-element-click"
