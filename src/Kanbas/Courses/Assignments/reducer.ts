@@ -45,7 +45,7 @@ const assignmentsSlice = createSlice({
       state.assignment = action.payload;
     },
 
-    cancelAssignmentUpdate: (state, action) => {
+    cancelAssignmentUpdate: (state) => {
       state.assignment = initialState.assignment;
     },
   },
