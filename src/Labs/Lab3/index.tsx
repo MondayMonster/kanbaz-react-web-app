@@ -30,13 +30,24 @@ import Styles from "./Styles";
 import Add from "./Add";
 import Square from "./Square";
 import Highlight from "./Highlight";
+import { useSelector } from "react-redux";
+
 import PathParameters from "./PathParameters";
 
 export default function Lab3() {
   console.log("Hello World!");
+  const { todos } = useSelector((state: any) => state.todosReducer);
   return (
     <div id="wd-lab3">
       <h3>Lab 3</h3>
+            <ul className="list-group">
+        {todos.map((todo: any) => (
+          <li className="list-group-item" key={todo.id}>
+            {todo.title}
+          </li>
+        ))}
+      </ul>
+      <hr />
       <VariablesAndConstants />
       <VariableTypes />
       <BooleanVariables />
@@ -59,20 +70,15 @@ export default function Lab3() {
       <JsonStringify />
       <House />
 
-      {/* 2.4.10 Rendering a Data Structure */}
       <TodoItem />
       <TodoList />
       <Spreading />
       <Destructing />
-      {/* 2.4.13 Destructing Function Parameters */}
       <FunctionDestructing />
       <DestructingImports />
-      {/* 2.5 Dynamic Styling */}
       <Classes />
       <Styles />
-      {/* 2.6 Parameterizing Components */}
       <Add a={3} b={4} />
-      {/* 2.6.1 Child Components */}
       <h4>Square of 4</h4>
       <Square>4</Square>
       <hr />

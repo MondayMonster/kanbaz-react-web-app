@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 export default function ObjectStateVariable() {
-  const [person, setPerson] = useState({ name: "Peter", age: 24 });
+  const [person, setPerson] = useState({ name: "Siddhant", age: 89 });
   return (
     <div>
       <h2>Object State Variables</h2>

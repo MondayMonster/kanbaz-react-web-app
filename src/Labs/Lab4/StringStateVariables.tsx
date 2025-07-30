@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 export default function StringStateVariables() {
-  const [firstName, setFirstName] = useState("John");
+  const [firstName, setFirstName] = useState("Siddhant");
   return (
     <div>
       <h2>String State Variables</h2>
