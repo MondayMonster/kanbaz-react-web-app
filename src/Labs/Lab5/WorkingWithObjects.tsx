@@ -1,5 +1,5 @@
 import { useState } from "react";
-const REMOTE_SERVER = process.env.VITE_REMOTE_SERVER;
+const REMOTE_SERVER = import.meta.env.VITE_REMOTE_SERVER;
 export default function WorkingWithObjects() {
   const [assignment, setAssignment] = useState({
     id: 1,
