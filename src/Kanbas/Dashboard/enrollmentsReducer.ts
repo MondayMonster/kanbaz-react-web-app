@@ -1,9 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { enrollments } from "../Database";
-// import { v4 as uuidv4 } from "uuid"; // Use uuid for unique IDs
 
 const initialState = {
-  enrollments: enrollments,
+  enrollments: [],
   enrollment: {
     _id: "",
     user: "",
@@ -14,10 +12,12 @@ const enrollmentsSlice = createSlice({
   name: "enrollments",
   initialState,
   reducers: {
+    setEnrollments: (state, action) => {
+      state.enrollments = action.payload;
+    },
     addEnrollment: (state, { payload: enrollment }) => {
       const newEnrollment: any = {
         _id: new Date().getTime().toString(),
-        // _id: uuidv4(), // Generate unique ID for each enrollment
         user: enrollment.user,
         course: enrollment.course,
       };
@@ -33,6 +33,6 @@ const enrollmentsSlice = createSlice({
     },
   },
 });
-export const { addEnrollment, unEnrollment, setEnrollment } =
+export const { setEnrollments, addEnrollment, unEnrollment, setEnrollment } =
   enrollmentsSlice.actions;
 export default enrollmentsSlice.reducer;

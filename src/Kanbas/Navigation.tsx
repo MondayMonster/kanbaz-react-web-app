@@ -7,11 +7,21 @@ import { FaInbox, FaRegCircleUser } from "react-icons/fa6";
 export default function KanbasNavigation() {
   const { pathname } = useLocation();
   const links = [
-    { label: "Dashboard", path: "/Kanbas/Dashboard", icon: AiOutlineDashboard },
-    { label: "Courses", path: "/Kanbas/Courses", icon: LiaBookSolid }, // Make sure this is correct
-    { label: "Calendar", path: "/Kanbas/Calendar", icon: IoCalendarOutline },
-    { label: "Inbox", path: "/Kanbas/Inbox", icon: FaInbox },
-    { label: "Labs", path: "/Labs", icon: LiaCogSolid },
+{
+      id: 0,
+      label: "Dashboard",
+      path: "/Kanbas/Dashboard",
+      icon: AiOutlineDashboard,
+    },
+    { id: 1, label: "Courses", path: "/Kanbas/Dashboard", icon: LiaBookSolid },
+    {
+      id: 2,
+      label: "Calendar",
+      path: "/Kanbas/Calendar",
+      icon: IoCalendarOutline,
+    },
+    { id: 3, label: "Inbox", path: "/Kanbas/Inbox", icon: FaInbox },
+    { id: 4, label: "Labs", path: "/Labs", icon: LiaCogSolid },
   ];
 
   return (

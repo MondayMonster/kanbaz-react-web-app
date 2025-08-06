@@ -46,6 +46,15 @@ export default function TOC() {
         </a>
       </li>
       <li className="nav-item">
+        <a
+          id="wd-a5"
+          href="#/Labs/Lab5"
+          className={`nav-link ${pathname.includes("Lab5") ? "active" : ""}`}
+        >
+          Lab 5
+        </a>
+      </li>
+      <li className="nav-item">
         <a id="wd-k" href="#/Kanbas" className="nav-link">
           Kanbas
         </a>
@@ -57,8 +66,28 @@ export default function TOC() {
           target="_blank"
           className="nav-link"
         >
-          Monday Monster GitHub (Siddhant Narode)
+          Monday Monster GitHub (Siddhant Narode) React Web App
         </a>
+      </li>
+      <li className="nav-item">
+        <a
+          id="wd-github"
+          href="https://github.com/MondayMonster/kanbaz-react-web-app"
+          target="_blank"
+          className="nav-link"
+        >
+          Monday Monster GitHub (Siddhant Narode) Server
+        </a>
+              <li className="nav-item">
+        <a
+          id="wd-github"
+          href="https://github.com/MondayMonster/kanbaz-react-web-app"
+          target="_blank"
+          className="nav-link"
+        >
+          Monday Monster GitHub (Siddhant Narode) Root Server
+        </a>
+      </li>
       </li>
     </ul>
   );

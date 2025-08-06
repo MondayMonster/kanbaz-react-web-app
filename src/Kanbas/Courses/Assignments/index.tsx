@@ -7,15 +7,36 @@ import { IoEllipsisVertical } from "react-icons/io5";
 import { FaTrash } from "react-icons/fa";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import AssignBeforeButtons from "./AssignBeforeButtons";
 import DeleteEditor from "./DeleteEditor";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import * as coursesClient from "../client";
+import * as assignmentsClient from "./client";
+
+import {
+  addAssignment,
+  deleteAssignment,
+  updateAssignment,
+  setAssignment,
+  cancelAssignmentUpdate,
+  setAssignments,
+} from "./reducer";
 
 export default function Assignments() {
   const { cid } = useParams();
   const { assignments } = useSelector((state: any) => state.assignmentsReducer);
   const [assignmentToDelete, setAssignmentToDelete] = useState<string>("");
+  const dispatch = useDispatch();
+  const fetchAssignments = async () => {
+    const assignments = await coursesClient.findAssignmentsForCourse(
+      cid as string
+    );
+    dispatch(setAssignments(assignments));
+  };
+  useEffect(() => {
+    fetchAssignments();
+  }, []);
   const { currentUser } = useSelector((state: any) => state.accountReducer);
   return (
     <div id="wd-assignments">
@@ -33,7 +54,6 @@ export default function Assignments() {
           </div>
           <ul className="wd-assigns list-group rounded-0">
             {assignments
-              .filter((assignment: any) => assignment.course === cid)
               .map((assignment: any) => (
                 <li className="wd-lesson list-group-item p-3 ps-1">
                   <div className="row align-items-center">
