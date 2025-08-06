@@ -3,8 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import {
   setEnrollments,
-  addEnrollment,
-  unEnrollment,
 } from "./enrollmentsReducer";
 import * as userClient from "../Account/client";
 export default function Dashboard({

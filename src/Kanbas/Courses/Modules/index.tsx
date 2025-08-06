@@ -9,7 +9,7 @@ import { useSelector, useDispatch } from "react-redux";
 import * as coursesClient from "../client";
 import * as modulesClient from "./client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   addModule,
   editModule,
