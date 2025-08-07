@@ -12,7 +12,6 @@ import AssignBeforeButtons from "./AssignBeforeButtons";
 import DeleteEditor from "./DeleteEditor";
 import { useEffect, useState } from "react";
 import * as coursesClient from "../client";
-import * as assignmentsClient from "./client";
 
 import {
   setAssignments
