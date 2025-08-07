@@ -71,23 +71,23 @@ export default function TOC() {
       </li>
       <li className="nav-item">
         <a
-          id="wd-github"
+          id="wd-github-server"
           href="https://github.com/MondayMonster/kambaz-node-server-app"
           target="_blank"
           className="nav-link"
         >
           Monday Monster GitHub (Siddhant Narode) Server
         </a>
-              <li className="nav-item">
+      </li>
+      <li className="nav-item">
         <a
-          id="wd-github"
+          id="wd-root-server"
           href="https://kambaz-node-server-app-mondaymonster.onrender.com"
           target="_blank"
           className="nav-link"
         >
           Monday Monster GitHub (Siddhant Narode) Root Server
         </a>
-      </li>
       </li>
     </ul>
   );
