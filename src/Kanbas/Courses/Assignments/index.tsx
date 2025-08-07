@@ -15,12 +15,7 @@ import * as coursesClient from "../client";
 import * as assignmentsClient from "./client";
 
 import {
-  addAssignment,
-  deleteAssignment,
-  updateAssignment,
-  setAssignment,
-  cancelAssignmentUpdate,
-  setAssignments,
+  setAssignments
 } from "./reducer";
 
 export default function Assignments() {
