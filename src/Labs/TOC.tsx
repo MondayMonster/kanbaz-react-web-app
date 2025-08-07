@@ -72,7 +72,7 @@ export default function TOC() {
       <li className="nav-item">
         <a
           id="wd-github"
-          href="https://github.com/MondayMonster/kanbaz-react-web-app"
+          href="https://github.com/MondayMonster/kambaz-node-server-app"
           target="_blank"
           className="nav-link"
         >
@@ -81,7 +81,7 @@ export default function TOC() {
               <li className="nav-item">
         <a
           id="wd-github"
-          href="https://github.com/MondayMonster/kanbaz-react-web-app"
+          href="https://kambaz-node-server-app-mondaymonster.onrender.com"
           target="_blank"
           className="nav-link"
         >
