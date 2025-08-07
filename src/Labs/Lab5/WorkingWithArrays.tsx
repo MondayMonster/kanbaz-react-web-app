@@ -9,6 +9,7 @@ export default function WorkingWithArrays() {
     description: "Create a NodeJS server with ExpressJS",
     due: "2021-09-09",
     completed: false,
+    
   });
 
   return (
@@ -123,7 +124,7 @@ export default function WorkingWithArrays() {
         <input
           type="checkbox"
           checked={todo.completed}
-          onChange={(e) => setTodo({ ...todo, completed: !todo.completed })}
+          onChange={() => setTodo({ ...todo, completed: !todo.completed })}
         />
         Completed
       </label>

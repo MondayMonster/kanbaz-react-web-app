@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { TiDelete } from "react-icons/ti";
 import * as client from "./client";
 import { FaPlusCircle, FaTrash } from "react-icons/fa";

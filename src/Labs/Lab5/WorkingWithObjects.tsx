@@ -68,7 +68,7 @@ export default function WorkingWithObjects() {
         <input
           type="checkbox"
           checked={assignment.completed}
-          onChange={(e) =>
+          onChange={() =>
             setAssignment({ ...assignment, completed: !assignment.completed })
           }
         />
