@@ -63,7 +63,7 @@ export default function Assignments() {
                       </p>
                       <p className="mb-0">
                         <span className="text-danger">Multiple Modules </span> |
-                        <strong> Not Available until</strong>{" "}
+                        <strong> Not Available until</strong>
                         {formatDateToCustomString(assignment.available_date)} |
                         <strong> Due </strong>
                         {formatDateToCustomString(assignment.due_date)}|{" "}
@@ -72,7 +72,8 @@ export default function Assignments() {
                     </div>
 
                     <div className="col-auto float-end">
-                      {currentUser.role === "FACULTY" && (
+                      {(currentUser.role === "FACULTY" ||
+                        currentUser.role === "ADMIN") && (
                         <FaTrash
                           className="text-danger me-2 mb-1"
                           data-bs-toggle="modal"

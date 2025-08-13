@@ -6,6 +6,9 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import { FaAlignJustify } from "react-icons/fa";
 import PeopleTable from "./People/Table";
+import * as coursesClient from "./client";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 
 // Define interface for Courses props
 interface CoursesProps {
@@ -15,8 +18,21 @@ interface CoursesProps {
 export default function Courses({ courses }: CoursesProps) {
   const { cid } = useParams();
   const course = courses.find((course) => course._id === cid);
+  const [users, setUsers] = useState<any[]>([]);
   const { pathname } = useLocation();
-
+  const fetchUsersForCourse = async () => {
+    if (!cid) return;
+    try {
+      const the_users = await coursesClient.findUsersForCourse(cid as string);
+      setUsers(the_users);
+    } catch (error) {
+      console.error("Failed to fetch users for course:", error);
+    }
+  };
+  useEffect(() => {
+    fetchUsersForCourse();
+  }, [cid]);
+  
   return (
     <div id="wd-courses">
       <h2 className="text-danger">
@@ -38,7 +54,7 @@ export default function Courses({ courses }: CoursesProps) {
               path="Assignments/:assignmentId"
               element={<AssignmentEditor />}
             />
-            <Route path="People" element={<PeopleTable />} />
+            <Route path="People" element={<PeopleTable users={users} />} />
           </Routes>
         </div>
       </div>
