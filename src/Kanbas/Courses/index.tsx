@@ -8,7 +8,6 @@ import { FaAlignJustify } from "react-icons/fa";
 import PeopleTable from "./People/Table";
 import * as coursesClient from "./client";
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
 
 // Define interface for Courses props
 interface CoursesProps {

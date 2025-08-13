@@ -7,7 +7,6 @@ export default function Users() {
   const [users, setUsers] = useState<any[]>([]);
   const { uid } = useParams();
   const [role, setRole] = useState("");
-  const [name, setName] = useState("");
 
   const createUser = async () => {
     const user = await client.createUser({
@@ -23,7 +22,6 @@ export default function Users() {
   };
 
   const filterUsersByName = async (name: string) => {
-    setName(name);
     if (name) {
       const users = await client.findUsersByPartialName(name);
       setUsers(users);
@@ -31,7 +29,6 @@ export default function Users() {
       fetchUsers();
     }
   };
-
   const filterUsersByRole = async (role: string) => {
     setRole(role);
     if (role) {
