@@ -82,7 +82,7 @@ export default function TOC() {
       <li className="nav-item">
         <a
           id="wd-root-server"
-          href="https://kambaz-node-server-app-mondaymonster.onrender.com"
+          href="https://kambaz-node-server-app-monday-monster-a6.onrender.com"
           target="_blank"
           className="nav-link"
         >
