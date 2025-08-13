@@ -1,8 +1,6 @@
 import { FaUserCircle } from "react-icons/fa";
-import React, { useState } from "react";
 import PeopleDetails from "./Details";
 import { Link } from "react-router-dom";
-import * as coursesClient from "../client";
 
 export default function PeopleTable({ users = [] }: { users?: any[] }) {
 

@@ -7,7 +7,7 @@ export const fetchAllCourses = async () => {
   return data;
 };
 
-export const deleteCourse = async (id: string) => {
+export const deleteCourse = async () => {
   const { data } = await axiosWithCredentials.get(COURSES_API);
   return data;
 };

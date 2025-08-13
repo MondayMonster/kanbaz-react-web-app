@@ -22,7 +22,6 @@ export default function Dashboard({
   setEnrolling: (enrolling: boolean) => void;
   updateEnrollment: (courseId: string, enrolled: boolean) => void;
 }) {
-  const dispatch = useDispatch();
   const { currentUser } = useSelector((state: any) => state.accountReducer);
 
   const isFacultyOrAdmin =
