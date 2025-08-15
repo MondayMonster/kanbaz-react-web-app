@@ -11,8 +11,6 @@ const QuizDetail = () => {
   const navigate = useNavigate();
   const { currentUser } = useSelector((state: any) => state.accountReducer);
   const { quizzes } = useSelector((state: any) => state.quizzesReducer); // Get quizzes from Redux store
-  const [questions, setQuestions] = useState([]);
-  const [isNewQuiz, setIsNewQuiz] = useState(false);
   const [quiz, setQuiz] = useState<any>(null);
 
   // Function to fetch quiz data
@@ -49,14 +47,12 @@ const QuizDetail = () => {
   };
   useEffect(() => {
     if (quizId === "NewQuiz") {
-      setIsNewQuiz(true);
       return;
     }
     const fetchQuestions = async () => {
       if (quizId) {
         // 确保 quizId 不为 undefined
         const data = await findQuestionsForQuiz(quizId);
-        setQuestions(data);
       } else {
         console.error("Quiz ID is undefined");
       }
@@ -249,6 +245,10 @@ const QuizDetail = () => {
         )}
       </div>
     </div>
+  );
+};
+
+export default QuizDetail;
   );
 };
 

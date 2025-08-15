@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Constants
-const REMOTE_SERVER = process.env.REACT_APP_REMOTE_SERVER;
+export const REMOTE_SERVER = import.meta.env.VITE_REMOTE_SERVER;
 
 // Fetch quiz questions by quiz ID
 export const fetchQuizQuestions = async (qid: any) => {
@@ -33,7 +33,7 @@ export const addNeWQuizQuestion = async (qid: any, question: any) => {
 // Update a quiz question
 export const updateQuizQuestion = async (questionId: string, question: any) => {
   try {
-    const response = await axios.put(
+    await axios.put(
       `${REMOTE_SERVER}/api/questions/${questionId}`,
       question
     );

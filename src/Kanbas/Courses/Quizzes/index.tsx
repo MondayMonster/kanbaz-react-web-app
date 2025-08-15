@@ -1,19 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { FaEllipsisV, FaCheckCircle, FaPlus } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import "./index.css";
 import { HiMagnifyingGlass } from "react-icons/hi2";
-import { AiOutlinePlus } from "react-icons/ai";
-import { BsGripVertical } from "react-icons/bs";
 import { AiFillCaretDown } from "react-icons/ai";
-import { BiDotsVerticalRounded } from "react-icons/bi";
-import { GiNotebook } from "react-icons/gi";
 import { RxRocket } from "react-icons/rx";
 import { useDispatch, useSelector } from "react-redux";
 import QuizController from "./QuizController";
 import ContextMenu from "./ContextMenu";
 import { setQuizzes } from "./reducer";
-import { findQuizzesForCourse } from "./client";
 import * as quizClient from "./client";
 
 function Quizzes() {
