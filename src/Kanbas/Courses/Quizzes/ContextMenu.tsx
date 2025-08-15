@@ -1,8 +1,6 @@
-import { FaTrash } from "react-icons/fa";
 import { RiForbidLine } from "react-icons/ri";
 import { FaCheckCircle, FaCircle } from "react-icons/fa";
 import { IoEllipsisVertical } from "react-icons/io5";
-import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import * as quizClient from "./client";
@@ -17,7 +15,6 @@ export default function ContextMenu({
   deleteQuiz: (quizId: string) => void;
 }) {
   const { cid } = useParams();
-  const dispatch = useDispatch();
   const { currentUser } = useSelector((state: any) => state.accountReducer);
   const [quiz, setQuiz] = useState<any>();
   const [isPublished, setPublish] = useState(false);
