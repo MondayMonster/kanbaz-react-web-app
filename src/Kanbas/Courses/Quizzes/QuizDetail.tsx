@@ -11,7 +11,7 @@ const QuizDetail = () => {
   const navigate = useNavigate();
   const { currentUser } = useSelector((state: any) => state.accountReducer);
   const { quizzes } = useSelector((state: any) => state.quizzesReducer); // Get quizzes from Redux store
-  const [questions, setQuestions] = useState([]);
+  const [, setQuestions] = useState([]);
   const [quiz, setQuiz] = useState<any>(null);
 
   // Function to fetch quiz data
@@ -250,3 +250,4 @@ const QuizDetail = () => {
   );
 };
 
+export default QuizDetail;
