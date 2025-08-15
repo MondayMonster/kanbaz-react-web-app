@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import MultipleChoiceEditor from "./MultipleChoiceEditor";
 import TrueFalseEditor from "./TrueFalseEditor";
 import FillInBlanksEditor from "./FillInBlanksEditor";
 import { IoIosArrowDown } from "react-icons/io";
-import { Question } from "../../../types";
+import type { Question } from "../../../types";
 import * as client from "./client";
 import { addQuestion, editQuestion } from "./reducer";
 
@@ -18,9 +18,7 @@ const QuestionEditor = () => {
   const { cid, qid, questionId } = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const questions = useSelector((state: any) =>
-    state.questionReducer ? state.questionReducer.questions : []
-  );
+
 
   const [currQuestion, setCurrQuestion] = useState<Question>({
     quizID: qid || "",

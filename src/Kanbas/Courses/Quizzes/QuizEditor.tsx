@@ -11,7 +11,6 @@ import {
   EditorProvider,
   Toolbar,
 } from "react-simple-wysiwyg";
-import QuizTab from "./QuizTab";
 import Navigation from "./QuestionEditor/Navigation";
 
 export default function QuizEditor() {

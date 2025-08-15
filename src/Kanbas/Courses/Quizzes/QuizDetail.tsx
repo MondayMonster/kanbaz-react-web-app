@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { useParams, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { findQuestionsForQuiz } from "./client";
 import * as quizClient from "./client";
-import Navigation from "./QuestionEditor/Navigation";
 import ProtectedStartQuizRoute from "./ProtectedStartQuizRoute";
 
 const QuizDetail = () => {
   const { cid, qid: quizId } = useParams();
-  const { pathname } = useLocation();
   const navigate = useNavigate();
   const { currentUser } = useSelector((state: any) => state.accountReducer);
   const { quizzes } = useSelector((state: any) => state.quizzesReducer); // Get quizzes from Redux store
@@ -67,10 +65,6 @@ const QuizDetail = () => {
   }, [quizId]);
 
   const isFaculty = currentUser.role === "FACULTY"; // Check if the user is a faculty member
-  const totalPoints = questions.reduce(
-    (sum: number, q: any) => sum + q.points,
-    0
-  ); // Sum of all question points
 
   return (
     <div className="container mt-4">

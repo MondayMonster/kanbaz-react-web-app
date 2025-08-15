@@ -6,11 +6,9 @@ import * as client from "./QuestionEditor/client";
 import {
   setQuestion,
   deleteQuestion,
-  editQuestion,
 } from "./QuestionEditor/reducer";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { MdEdit } from "react-icons/md";
-import Editor from "react-simple-wysiwyg";
 import Navigation from "./QuestionEditor/Navigation";
 
 const QuizPreview = () => {
@@ -22,7 +20,6 @@ const QuizPreview = () => {
   const isFaculty = currentUser.role === "FACULTY";
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
-  const [selectedQuestion, setSelectedQuestion] = useState<any>(null);
   const [questions, setQuestions] = useState<any[]>([]);
   const [modalPosition, setModalPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
@@ -67,19 +64,6 @@ const QuizPreview = () => {
     setShowEditModal(false);
   };
 
-  const handleUpdateQuestion = async () => {
-    try {
-      await client.updateQuizQuestion(selectedQuestion._id, selectedQuestion);
-      const updatedQuestions = await client.fetchQuizQuestions(quizId);
-      setQuestions(updatedQuestions);
-      dispatch(setQuestion(updatedQuestions));
-      setShowEditModal(false);
-      setSelectedQuestion(null);
-    } catch (error) {
-      console.error("Error updating question:", error);
-      alert("Failed to update question. Please try again.");
-    }
-  };
 
   const handleMouseDown = (e: React.MouseEvent) => {
     setIsDragging(true);

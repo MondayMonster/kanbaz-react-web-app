@@ -1,17 +1,15 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import { findQuestionsForQuiz, submitQuiz } from "./client";
 
 const QuizTaker = ({ onSubmit }: { onSubmit?: (score: number) => void }) => {
-  const { cid, qid } = useParams();
-  const navigate = useNavigate();
+  const { qid } = useParams();
   const [questions, setQuestions] = useState<any[]>([]);
   const [answers, setAnswers] = useState<any>({});
   const [loading, setLoading] = useState<boolean>(true);
 
   const { currentUser } = useSelector((state: any) => state.accountReducer);
-  const isFaculty = currentUser.role === "FACULTY";
 
   const fetchQuestions = async () => {
     try {

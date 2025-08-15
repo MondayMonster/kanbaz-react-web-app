@@ -1,4 +1,3 @@
-import React from "react";
 import QuizTaker from "./QuizTaker";
 
 const QuizComponent = () => (

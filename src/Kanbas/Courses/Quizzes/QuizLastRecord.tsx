@@ -4,7 +4,7 @@ import { findLastRecordForQuizAndUser, findQuestionsForQuiz } from "./client";
 import { useEffect, useState } from "react";
 
 const QuizLastRecord = () => {
-    const { cid, qid } = useParams();
+    const { qid } = useParams();
     const { currentUser } = useSelector((state: any) => state.accountReducer);
     const [lastRecord, setLastRecord] = useState<any>(null);
     const [questions, setQuestions] = useState<any[]>([]);
