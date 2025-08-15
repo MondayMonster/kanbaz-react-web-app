@@ -87,10 +87,10 @@ export const findLastRecordForQuizAndUser = async (
 
 // Function to submit a quiz
 export const submitQuiz = async (quizId: string, userId: string, record: any) => {
-  console.log("API URL:", `${RECORDS_API}`);
+  console.log("API URL:", `${RECORDS_API}/quiz/${quizId}/user/${userId}`);
   console.log("Submitting quiz with record:", record);
   const response = await axiosWithCredentials.post(
-    `${RECORDS_API}`,
+    `${RECORDS_API}/quiz/${quizId}/user/${userId}`,
     record
   );
   return response.data;

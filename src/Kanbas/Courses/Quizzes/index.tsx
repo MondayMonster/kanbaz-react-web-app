@@ -93,7 +93,7 @@ function Quizzes() {
 
   // Delete quiz
   const deleteQuiz = async (quizId: string) => {
-    const status = await quizClient.deleteQuiz(quizId);
+     await quizClient.deleteQuiz(quizId);
     setQuizzesState(quizzes.filter((quiz) => quiz._id !== quizId));
     fetchQuizzes();
   };
