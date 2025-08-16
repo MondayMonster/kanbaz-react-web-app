@@ -66,7 +66,7 @@ const QuizDetail = () => {
     fetchQuestions();
   }, [quizId]);
 
-  const isFaculty = currentUser.role === "FACULTY"; // Check if the user is a faculty member
+  const isFaculty = currentUser && currentUser.role === "FACULTY"; // Check if the user is a faculty member
   const totalPoints = questions.reduce(
     (sum: number, q: any) => sum + q.points,
     0

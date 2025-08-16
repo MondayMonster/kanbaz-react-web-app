@@ -27,27 +27,41 @@ export default function Kanbas() {
     description: "New Description",
   });
   const findCoursesForUser = async () => {
-
     try {
-      const courses = await userClient.findCoursesForUser(currentUser._id);
+      // Add a check for currentUser before accessing _id
+      if (!currentUser) {
+        console.log("No current user available.");
+        setCourses([]);
+        return;
+      }
+      
+      // Use a safer approach with error handling
+      const courses = await userClient.findCoursesForUser(currentUser._id || "current");
       if (!courses || courses.length === 0) {
         console.log("No courses found for this user.");
-        setCourses([]); // Set an empty array to avoid rendering issues
+        setCourses([]);
       } else {
         setCourses(courses);
       }    
     } catch (error) {
       console.log("Failed to fetch courses:", error);
+      setCourses([]); // Ensure courses state is set even on error
     }
 
   };
   // fetch all the courses in database
   const fetchAllCourses = async () => {
     try {
-            const allCourses = await courseClient.fetchAllCourses();
-      const enrolledCourses = await userClient.findCoursesForUser(
-        currentUser._id
-      );
+      // Add a check for currentUser before accessing _id
+      if (!currentUser) {
+        console.log("No current user available for fetching all courses.");
+        setCourses([]);
+        return;
+      }
+      
+      const allCourses = await courseClient.fetchAllCourses();
+      // Use a safer approach to get enrolled courses
+      const enrolledCourses = await userClient.findCoursesForUser(currentUser._id || "current");
       const courses = allCourses.map((course: any) => {
         if (enrolledCourses.find((c: any) => c._id === course._id)) {
           return { ...course, enrolled: true };
@@ -57,7 +71,8 @@ export default function Kanbas() {
       });
       setCourses(courses);
     } catch (error) {
-      console.error(error);
+      console.error("Error fetching all courses:", error);
+      setCourses([]); // Ensure courses state is set even on error
     }
   };
 
@@ -72,20 +87,29 @@ export default function Kanbas() {
   }, [currentUser, enrolling]);
 
     const updateEnrollment = async (courseId: string, enrolled: boolean) => {
-    if (enrolled) {
-      await userClient.enrollIntoCourse(currentUser._id, courseId);
-    } else {
-      await userClient.unenrollFromCourse(currentUser._id, courseId);
+    if (!currentUser || !currentUser._id) {
+      console.error("Cannot update enrollment: No user ID available");
+      return;
     }
-    setCourses(
-      courses.map((course) => {
-        if (course._id === courseId) {
-          return { ...course, enrolled: enrolled };
-        } else {
-          return course;
-        }
-      })
-    );
+    
+    try {
+      if (enrolled) {
+        await userClient.enrollIntoCourse(currentUser._id, courseId);
+      } else {
+        await userClient.unenrollFromCourse(currentUser._id, courseId);
+      }
+      setCourses(
+        courses.map((course) => {
+          if (course._id === courseId) {
+            return { ...course, enrolled: enrolled };
+          } else {
+            return course;
+          }
+        })
+      );
+    } catch (error) {
+      console.error("Error updating enrollment:", error);
+    }
   };
 
 const addNewCourse = async () => {
