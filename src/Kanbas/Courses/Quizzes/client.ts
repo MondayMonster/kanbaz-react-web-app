@@ -95,3 +95,23 @@ export const submitQuiz = async (quizId: string, userId: string, record: any) =>
   );
   return response.data;
 };
+
+// Add this debugging helper function
+export const findCoursesForUser = async (userId: string | undefined) => {
+  // Add debugging to catch undefined userId
+  if (!userId) {
+    console.error("Attempted to fetch courses with undefined userId");
+    console.trace("Stack trace for undefined userId");
+    return []; // Return empty array instead of making the API call
+  }
+  
+  try {
+    const response = await axiosWithCredentials.get(
+      `${REMOTE_SERVER}/api/users/${userId}/courses`
+    );
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching courses for user:", error);
+    return [];
+  }
+};
