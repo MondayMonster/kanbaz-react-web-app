@@ -1,5 +1,5 @@
-import  { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { findQuestionsForQuiz } from "./client";
@@ -8,14 +8,18 @@ import ProtectedStartQuizRoute from "./ProtectedStartQuizRoute";
 
 const QuizDetail = () => {
   const { cid, qid: quizId } = useParams();
+  const { pathname } = useLocation();
   const navigate = useNavigate();
   const { currentUser } = useSelector((state: any) => state.accountReducer);
   const { quizzes } = useSelector((state: any) => state.quizzesReducer); // Get quizzes from Redux store
-  const [, setQuestions] = useState([]);
+  const [questions, setQuestions] = useState([]);
+  const [isNewQuiz, setIsNewQuiz] = useState(false);
   const [quiz, setQuiz] = useState<any>(null);
 
   // Function to fetch quiz data
   const fetchQuiz = async (quizId: string) => {
+    console.log("Fetching pathname with ID:", pathname);
+    console.log("fetching isnewquiz:", isNewQuiz);
     try {
       const curQuiz = await quizClient.findQuizById(quizId); // API call to fetch quiz details
       if (!curQuiz) {
@@ -48,11 +52,11 @@ const QuizDetail = () => {
   };
   useEffect(() => {
     if (quizId === "NewQuiz") {
+      setIsNewQuiz(true);
       return;
     }
     const fetchQuestions = async () => {
       if (quizId) {
-        // 确保 quizId 不为 undefined
         const data = await findQuestionsForQuiz(quizId);
         setQuestions(data);
       } else {
@@ -63,6 +67,11 @@ const QuizDetail = () => {
   }, [quizId]);
 
   const isFaculty = currentUser.role === "FACULTY"; // Check if the user is a faculty member
+  const totalPoints = questions.reduce(
+    (sum: number, q: any) => sum + q.points,
+    0
+  );
+  console.log(totalPoints); // Sum of all question points
 
   return (
     <div className="container mt-4">
