@@ -28,15 +28,23 @@ export default function Kanbas() {
   });
   const findCoursesForUser = async () => {
     try {
-      // Add a check for currentUser before accessing _id
+      // Check if currentUser exists
       if (!currentUser) {
         console.log("No current user available.");
         setCourses([]);
         return;
       }
       
-      // Use a safer approach with error handling
-      const courses = await userClient.findCoursesForUser(currentUser._id || "current");
+      // Extract the user ID, handling both String and ObjectId cases
+      const userId = currentUser._id ? currentUser._id.toString() : undefined;
+      
+      if (!userId) {
+        console.log("Current user has no ID.");
+        setCourses([]);
+        return;
+      }
+      
+      const courses = await userClient.findCoursesForUser(userId);
       if (!courses || courses.length === 0) {
         console.log("No courses found for this user.");
         setCourses([]);
@@ -45,7 +53,6 @@ export default function Kanbas() {
       }    
     } catch (error) {
       console.log("Failed to fetch courses:", error);
-      setCourses([]); // Ensure courses state is set even on error
     }
 
   };
