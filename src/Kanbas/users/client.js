@@ -2,7 +2,7 @@ import axios from "axios";
 //export const BASE_API = process.env.REACT_APP_BASE_API_URL;
 //export const USERS_API = `${BASE_API}/api/users`;
 //export const BASE_API = "http://localhost:4000";
-export const BASE_API = "https://kanbas-node-server-app-a6-mtju.onrender.com"
+export const BASE_API = "https://kambaz-node-server-app-monday-monster-fp.onrender.com"
 export const USERS_API = `${BASE_API}/api/users`;
 const request = axios.create({
     withCredentials: true,
